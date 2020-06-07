@@ -1,8 +1,16 @@
 import React from "react";
 import { MaterialIcons } from "@expo/vector-icons";
-import { View, StyleSheet, Text, Dimensions } from "react-native";
+import {
+  View,
+  StyleSheet,
+  Text,
+  Dimensions,
+  Image,
+  ImageBackground,
+} from "react-native";
+import { Header } from "@react-navigation/stack";
 
-export default function Header({ navigation, title }) {
+export default function MyHeader({ navigation, title }) {
   const openMenu = () => {
     navigation.openDrawer();
   };
@@ -14,7 +22,11 @@ export default function Header({ navigation, title }) {
         onPress={openMenu}
         style={styles.icon}
       ></MaterialIcons>
-      <View>
+      <View style={styles.headerTitle}>
+        <Image
+          source={require("../assets/heart_logo.png")}
+          style={styles.headerImage}
+        ></Image>
         <Text style={styles.headerText}>{title}</Text>
       </View>
     </View>
@@ -23,7 +35,6 @@ export default function Header({ navigation, title }) {
 
 const styles = StyleSheet.create({
   header: {
-    flex: 1,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
@@ -36,8 +47,17 @@ const styles = StyleSheet.create({
   },
   icon: {
     position: "absolute",
-    left: 16,
     fontSize: 45,
-    bottom: -5,
+    left: 15,
+    bottom: 5,
+  },
+  headerImage: {
+    width: 30,
+    height: 30,
+    marginRight: 10,
+  },
+  headerTitle: {
+    flexDirection: "row",
+    bottom: 8,
   },
 });

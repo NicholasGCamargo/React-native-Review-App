@@ -2,6 +2,9 @@ import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import Sobre from "../screens/sobre";
 import Header from "../shared/header";
+import MyHeader from "../shared/header";
+import { Image } from "react-native";
+import { globalStyles } from "../styles/global";
 
 const Stack = createStackNavigator();
 
@@ -23,9 +26,17 @@ export default function sobreNavigator({ navigation }) {
         name="Sobre"
         component={Sobre}
         options={{
+          headerBackground: () => {
+            return (
+              <Image
+                source={require("../assets/game_bg.png")}
+                style={globalStyles.imgBg}
+              ></Image>
+            );
+          },
           headerTitle: () => {
             return (
-              <Header navigation={navigation} title="Sobre o App"></Header>
+              <MyHeader navigation={navigation} title="Sobre o App"></MyHeader>
             );
           },
         }}
