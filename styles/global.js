@@ -17,6 +17,14 @@ export const globalStyles = StyleSheet.create({
   imgBg: {
     height: 70,
   },
+  input: {
+    borderWidth: 1,
+    borderColor: "#ddd",
+    padding: 10,
+    fontSize: 18,
+    borderRadius: 6,
+    margin: 8,
+  },
 });
 
 export const images = {
