@@ -9,9 +9,30 @@ const Stack = createStackNavigator();
 export default function Navigator() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="DetalheReview" component={DetalheReview} />
+      <Stack.Navigator
+        initialRouteName="Home"
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: "#eee",
+            height: 60,
+          },
+          headerTintColor: "#444",
+        }}
+      >
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{
+            title: "Tela Principal",
+          }}
+        />
+        <Stack.Screen
+          name="DetalheReview"
+          component={DetalheReview}
+          options={{
+            title: "Detalhes da Review",
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
