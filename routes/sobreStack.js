@@ -1,15 +1,14 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import Home from "../screens/home";
-import DetalheReview from "../screens/detalheReview";
+import Sobre from "../screens/sobre";
 import Header from "../shared/header";
 
 const Stack = createStackNavigator();
 
-export default function HomeNavigator({ navigation }) {
+export default function sobreNavigator({ navigation }) {
   return (
     <Stack.Navigator
-      initialRouteName="Home"
+      initialRouteName="Sobre"
       screenOptions={{
         headerStyle: {
           backgroundColor: "#999",
@@ -21,21 +20,14 @@ export default function HomeNavigator({ navigation }) {
       }}
     >
       <Stack.Screen
-        name="Home"
-        component={Home}
+        name="Sobre"
+        component={Sobre}
         options={{
           headerTitle: () => {
             return (
-              <Header navigation={navigation} title="Tela Principal"></Header>
+              <Header navigation={navigation} title="Sobre o App"></Header>
             );
           },
-        }}
-      />
-      <Stack.Screen
-        name="DetalheReview"
-        component={DetalheReview}
-        options={{
-          title: "Detalhe da Review",
         }}
       />
     </Stack.Navigator>
