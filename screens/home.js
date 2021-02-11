@@ -4,7 +4,6 @@ import {
   View,
   Text,
   FlatList,
-  TouchableOpacity,
   Modal,
   TouchableWithoutFeedback,
   Keyboard,

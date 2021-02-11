@@ -1,14 +1,6 @@
 import React from "react";
 import { MaterialIcons } from "@expo/vector-icons";
-import {
-  View,
-  StyleSheet,
-  Text,
-  Dimensions,
-  Image,
-  ImageBackground,
-} from "react-native";
-import { Header } from "@react-navigation/stack";
+import { View, StyleSheet, Text, Image } from "react-native";
 
 export default function MyHeader({ navigation, title }) {
   const openMenu = () => {

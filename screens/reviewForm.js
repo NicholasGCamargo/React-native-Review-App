@@ -1,7 +1,7 @@
 import React from "react";
 import { globalStyles } from "../styles/global";
 import { Formik } from "formik";
-import { StyleSheet, Button, Text, View, TextInput } from "react-native";
+import { Text, View, TextInput } from "react-native";
 import * as yup from "yup";
 import FlatButton from "../shared/mybytton";
 

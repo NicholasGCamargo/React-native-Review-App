@@ -1,7 +1,6 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import Sobre from "../screens/sobre";
-import Header from "../shared/header";
 import MyHeader from "../shared/header";
 import { Image } from "react-native";
 import { globalStyles } from "../styles/global";
